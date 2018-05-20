@@ -1,15 +1,10 @@
-import Ember from 'ember';
+import Service from '@ember/service';
+import { get, computed } from '@ember/object';
+import RSVP from 'rsvp';
+import { isPresent } from '@ember/utils';
 import config from 'auth0-ember-samples/config/environment';
 
 const AUTH_CONFIG = config.auth0;
-
-const {
-  computed,
-  Service,
-  get,
-  RSVP,
-  isPresent,
-} = Ember;
 
 export default Service.extend({
   auth0: computed(function () {
