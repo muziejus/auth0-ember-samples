@@ -1,5 +1,7 @@
 'use strict';
 
+const AUTH_CONFIG = require('./auth0-variables');
+
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'auth0-ember-samples',
