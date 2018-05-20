@@ -1,17 +1,15 @@
-/* jshint node: true */
-const AUTH_CONFIG = require('./auth0-variables');
+'use strict';
 
-module.exports = function (environment) {
-  var ENV = {
+module.exports = function(environment) {
+  let ENV = {
     modulePrefix: 'auth0-ember-samples',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-        // e.g. 'w ith-controller': true
-        'ds-improved-ajax': true,
+        // e.g. 'with-controller': true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -42,10 +40,11 @@ module.exports = function (environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
-
+    // here you can enable a production-specific feature
   }
 
   ENV.auth0 = {
