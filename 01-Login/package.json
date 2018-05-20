@@ -45,6 +45,7 @@
     "node": ">= 7.*"
   },
   "dependencies": {
+    "ember-cli-node-modules-to-vendor": "^0.3.0",
     "npm": "^6.0.1"
   }
 }
